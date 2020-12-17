@@ -1,0 +1,19 @@
+enable
+conf t
+enable secret cisco
+username cisco password cisco
+line vty 0 4
+transport input telnet
+login local
+exit
+interface vlan 1
+ip address 10.10.20.103 255.255.255.0
+no sh
+exit
+vrf definition mgmt-intf
+address-family ipv4
+exit
+ip route vrf mgmt-intf 0.0.0.0 0.0.0.0 10.10.20.161
+no ip domain lookup
+end
+wr
