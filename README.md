@@ -1,4 +1,4 @@
-# Simple project for a specific course
+# Simple project for programmable infrastructure - HEH - 2020
 
 ## Telnet_Python
 Script for configuring Router or switch over telnet
